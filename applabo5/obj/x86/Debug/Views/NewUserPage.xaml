@@ -1,0 +1,115 @@
+﻿<Page
+    x:Class="HomeSnailHome.Views.NewUserPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HomeSnailHome.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=NewUserPage}"
+    Style="{StaticResource MapStyle}">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid HorizontalAlignment="Center" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" MinWidth="200" />
+                <ColumnDefinition Width="8*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="37" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.Column="0" Height="Auto" Width="30" Margin="2,10,2,0" Stretch="UniformToFill" Source="/Images/icon/icon_user.png" VerticalAlignment="Top"/>
+                <CommandBar Grid.Row="0" Grid.Column="1" Background="Transparent" Height="75" Margin="0,0,0,5" HorizontalAlignment="Right">
+                    <AppBarButton x:ConnectionId='15' x:Name="Cancel" Width="100" Icon="Back"
+                          Command="{Binding GoBackToHomeCommand}" Label="Annuler inscription" HorizontalAlignment="Center" />
+                    <AppBarButton x:ConnectionId='16' x:Name="Save" Width="100" Icon="Save"
+                          Command="{Binding GoNextCommand}" Label="Sauvegarder inscription" HorizontalAlignment="Center" />
+                    <CommandBar.Content>
+                        <TextBlock Text="Nouvel utilisateur..." Margin="12,14,0,0" MinWidth="225" />
+                    </CommandBar.Content>
+                </CommandBar>
+                <ProgressBar Margin="0,10" Opacity="{Binding ProgressBarOpacity}" Foreground="#aa2d27"  Height="10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" IsIndeterminate="{Binding ProgressIsIndeterminate}" />
+            </Grid>            
+            <TextBlock Grid.Row="1" Grid.Column="0">Adresse email :</TextBlock>
+            <TextBox x:ConnectionId='1' x:Name="ID" InputScope="EmailNameOrAddress"  Text="{Binding NewUser.ID, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Margin="0,0,0,5" />
+            <TextBlock Grid.Row="2" Grid.Column="0">Mot de Passe :</TextBlock>
+            <PasswordBox x:ConnectionId='2' x:Name="PassWord1" Password="{Binding PassWord, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" Margin="0,0,0,5" />
+            <TextBlock Grid.Row="3" Grid.Column="0">Confirmer Mot de Passe :</TextBlock>
+            <PasswordBox x:ConnectionId='3' x:Name="PassWord2" Password="{Binding ConfirmPassWord, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="3" Grid.Column="1" Margin="0,0,0,5" />
+            <TextBlock Grid.Row="4" Grid.Column="0">Nom :</TextBlock>
+            <TextBox x:ConnectionId='4' x:Name="LastName" InputScope="PersonalFullName" Text="{Binding NewUser.LastName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" Margin="0,0,0,5" />
+            <TextBlock Grid.Row="5" Grid.Column="0">Prénom :</TextBlock>
+            <TextBox x:ConnectionId='5' x:Name="FirstName" InputScope="PersonalFullName" Text="{Binding NewUser.FirstName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="5" Grid.Column="1" Margin="0,0,0,5" />
+            <TextBlock Grid.Row="6" Grid.Column="0">Date de Naissance :</TextBlock>
+            <DatePicker x:ConnectionId='6' x:Name="BirthDate" Date="{Binding Birthdate, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="6" Grid.Column="1" Width="Auto" HorizontalAlignment="Left" Margin="0,0,0,5" VerticalAlignment="Top" />
+            <TextBlock Grid.Row="8" Grid.Column="0">Téléphone :</TextBlock>
+            <TextBox x:ConnectionId='7' x:Name="PhoneNumber" InputScope="TelephoneNumber"  Text="{Binding NewUser.PhoneNumber, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="8" Grid.Column="1" Margin="0,0,0,5" />
+            <TextBlock Grid.Row="9" Grid.Column="0" HorizontalAlignment="Center">Adresse :</TextBlock>
+            <TextBlock Grid.Row="10" Grid.Column="0">Numero et BP :</TextBlock>
+            <StackPanel Grid.Row="10" Grid.Column="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBox x:ConnectionId='13' x:Name="Number" InputScope="AlphanumericHalfWidth" Text="{Binding NewUser.Number, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="10" Grid.Column="0" Margin="0,0,10,5" />
+                    <TextBox x:ConnectionId='14' x:Name="PostBox" InputScope="Number" Text="{Binding strPostBox, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="10" Grid.Column="1" Margin="0,0,0,5" />
+                </Grid>
+            </StackPanel>
+            <TextBlock Grid.Row="11" Grid.Column="0">Rue :</TextBlock>
+            <TextBox x:ConnectionId='8' x:Name="Street" InputScope="PersonalFullName" Text="{Binding NewUser.Street, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="11" Grid.Column="1" Margin="0,0,0,5" />
+            <TextBlock Grid.Row="12" Grid.Column="0">Code Postal et Localité :</TextBlock>
+            <StackPanel Grid.Row="12" Grid.Column="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="8*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBox x:ConnectionId='11' x:Name="ZipCode" InputScope="Number"  Text="{Binding strZipCode, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="12" Grid.Column="0" Margin="0,0,10,5" />
+                    <TextBox x:ConnectionId='12' x:Name="City" InputScope="PersonalFullName"  Text="{Binding NewUser.City, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="12" Grid.Column="1" Margin="0,0,0,5" />
+                </Grid>
+            </StackPanel>
+            <TextBlock Grid.Row="13" Grid.Column="0">Pays :</TextBlock>
+            <TextBox x:ConnectionId='9' x:Name="Country" InputScope="PersonalFullName" Text="{Binding NewUser.Country, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="13" Grid.Column="1" Margin="0,0,0,5" />
+            <TextBlock Grid.Row="14" Grid.Column="0">URL Photo :</TextBlock>
+            <TextBox x:ConnectionId='10' x:Name="Picture" InputScope="Url"  Text="{Binding NewUser.Picture, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="14" Grid.Column="1" Margin="0,0,0,5" />
+            <!--
+            <StackPanel Grid.Row="15" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0" >
+                <Button x:Name="SaveUserButton" Content="Valider Inscription" Command="{Binding GoNextCommand}" Margin="0,0,5,0" Width="Auto"/>
+                <Button Name="CancelButton" Content="Annuler Inscription" Command="{Binding GoBackToHomeCommand}" Margin="5,0,0,0" Width="Auto"/>
+            </StackPanel>
+            -->
+        </Grid>
+    </ScrollViewer>
+</Page>
+

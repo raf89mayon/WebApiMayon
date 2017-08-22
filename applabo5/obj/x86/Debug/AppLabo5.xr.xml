@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="EmailAddress" />
+    <RootPropertyPathName Name="BirthDate" />
+    <RootPropertyPathName Name="FirstName" />
+    <RootPropertyPathName Name="LastName" />
+    <RootPropertyPathName Name="ID" />
+    <RootPropertyPathName Name="Picture" />
+    <RootPropertyPathName Name="Comment" />
+    <RootPropertyPathName Name="Origin" />
+    <RootPropertyPathName Name="DateNotation" />
+    <RootPropertyPathName Name="Quotation" />
+    <RootPropertyPathName Name="Content" />
+    <RootPropertyPathName Name="SendDate" />
+    <RootPropertyPathName Name="Sender" />
+    <RootPropertyPathName Name="Messages" />
+    <RootPropertyPathName Name="Subject" />
+    <RootPropertyPathName Name="Correspondant" />
+    <RootPropertyPathName Name="Reciever" />
+    <RootPropertyPathName Name="EditDate" />
+    <RootPropertyPathName Name="AddDate" />
+    <RootPropertyPathName Name="City" />
+    <RootPropertyPathName Name="EndDate" />
+    <RootPropertyPathName Name="StartDate" />
+    <RootPropertyPathName Name="Host" />
+    <RootPropertyPathName Name="Pictures" />
+    <RootPropertyPathName Name="ConversationListPage" />
+    <RootPropertyPathName Name="ConversationListing" />
+    <RootPropertyPathName Name="SelectedConversation" />
+    <RootPropertyPathName Name="OpenConversationCommand" />
+    <RootPropertyPathName Name="BackToCommand" />
+    <RootPropertyPathName Name="DetailHousingPage" />
+    <RootPropertyPathName Name="NotationsHousing" />
+    <RootPropertyPathName Name="NotationsTitle" />
+    <RootPropertyPathName Name="SelectedHousing" />
+    <RootPropertyPathName Name="PhoneNumber" />
+    <RootPropertyPathName Name="Description" />
+    <RootPropertyPathName Name="Wifi" />
+    <RootPropertyPathName Name="Office" />
+    <RootPropertyPathName Name="Shower" />
+    <RootPropertyPathName Name="Toilet" />
+    <RootPropertyPathName Name="Kitchen" />
+    <RootPropertyPathName Name="BedType" />
+    <RootPropertyPathName Name="DeleteHousingCommand" />
+    <RootPropertyPathName Name="CommentHousingCommand" />
+    <RootPropertyPathName Name="ContactHousingCommand" />
+    <RootPropertyPathName Name="EditHousingCommand" />
+    <RootPropertyPathName Name="BackToHousingsCommand" />
+    <RootPropertyPathName Name="EditHousingPage" />
+    <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="Code" />
+    <RootPropertyPathName Name="Display" />
+    <RootPropertyPathName Name="IsOn" />
+    <RootPropertyPathName Name="NewPicture" />
+    <RootPropertyPathName Name="UpdatePicture" />
+    <RootPropertyPathName Name="LocalitiesCollection" />
+    <RootPropertyPathName Name="SelectedLocality" />
+    <RootPropertyPathName Name="Street" />
+    <RootPropertyPathName Name="strPostBox" />
+    <RootPropertyPathName Name="Number" />
+    <RootPropertyPathName Name="BedTypeCollection" />
+    <RootPropertyPathName Name="SelectedBedType" />
+    <RootPropertyPathName Name="EndTime" />
+    <RootPropertyPathName Name="EndDay" />
+    <RootPropertyPathName Name="StartTime" />
+    <RootPropertyPathName Name="StartDay" />
+    <RootPropertyPathName Name="SaveHousingCommand" />
+    <RootPropertyPathName Name="HomePage" />
+    <RootPropertyPathName Name="SignOutCommand" />
+    <RootPropertyPathName Name="ConnectedUser" />
+    <RootPropertyPathName Name="HousingPage" />
+    <RootPropertyPathName Name="HousingsList" />
+    <RootPropertyPathName Name="OrderAvailableDateCommand" />
+    <RootPropertyPathName Name="OrderAddDateCommand" />
+    <RootPropertyPathName Name="DetailHousingCommand" />
+    <RootPropertyPathName Name="HousingResultsPage" />
+    <RootPropertyPathName Name="HousingResults" />
+    <RootPropertyPathName Name="GoBackCommand" />
+    <RootPropertyPathName Name="HousingSearchPage" />
+    <RootPropertyPathName Name="KitchenChecked" />
+    <RootPropertyPathName Name="ToiletChecked" />
+    <RootPropertyPathName Name="ShowerChecked" />
+    <RootPropertyPathName Name="OfficeChecked" />
+    <RootPropertyPathName Name="WifiChecked" />
+    <RootPropertyPathName Name="ProgressBarOpacity" />
+    <RootPropertyPathName Name="ProgressIsIndeterminate" />
+    <RootPropertyPathName Name="GoNextCommand" />
+    <RootPropertyPathName Name="GoBackToHomeCommand" />
+    <RootPropertyPathName Name="MainPage" />
+    <RootPropertyPathName Name="CreateNewUserCommand" />
+    <RootPropertyPathName Name="ConnectionCommand" />
+    <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="Email" />
+    <RootPropertyPathName Name="MyHousingPage" />
+    <RootPropertyPathName Name="OrderEditDateCommand" />
+    <RootPropertyPathName Name="NewHousingPage" />
+    <RootPropertyPathName Name="Zip" />
+    <RootPropertyPathName Name="NewHousing" />
+    <RootPropertyPathName Name="NewMessagePage" />
+    <RootPropertyPathName Name="DiscussionMessageList" />
+    <RootPropertyPathName Name="MessageContent" />
+    <RootPropertyPathName Name="SendMessageCommand" />
+    <RootPropertyPathName Name="BackToConversationCommand" />
+    <RootPropertyPathName Name="NewNotationPage" />
+    <RootPropertyPathName Name="CommentContent" />
+    <RootPropertyPathName Name="QuotationValue" />
+    <RootPropertyPathName Name="SendNotationCommand" />
+    <RootPropertyPathName Name="BackToHousingCommand" />
+    <RootPropertyPathName Name="NewUserPage" />
+    <RootPropertyPathName Name="NewUser" />
+    <RootPropertyPathName Name="Country" />
+    <RootPropertyPathName Name="strZipCode" />
+    <RootPropertyPathName Name="Birthdate" />
+    <RootPropertyPathName Name="ConfirmPassWord" />
+    <RootPropertyPathName Name="PassWord" />
+    <RootPropertyPathName Name="Shell" />
+    <RootPropertyPathName Name="AboutCommand" />
+    <RootPropertyPathName Name="UsersCommand" />
+    <RootPropertyPathName Name="ConversationCommand" />
+    <RootPropertyPathName Name="MyHousingCommand" />
+    <RootPropertyPathName Name="HousingSearchCommand" />
+    <RootPropertyPathName Name="HousingAddCommand" />
+    <RootPropertyPathName Name="HousingListCommand" />
+    <RootPropertyPathName Name="HomeCommand" />
+    <RootPropertyPathName Name="UserPage" />
+    <RootPropertyPathName Name="UserList" />
+    <RootPropertyPathName Name="SelectedUser" />
+    <RootPropertyPathName Name="ContactUserCommand" />
+  </Roots.PropertyPathNames>
+  <Roots.RootTypes>
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Page">
+      <RootProperty Name="Content" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Style" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="Background" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Foreground" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.ViewModel.ViewModelLocator" />
+    <RootType FullName="HomeSnailHome.Converter.StringFormatConverter" />
+    <RootType FullName="HomeSnailHome.Converter.BedTypeConverter" />
+    <RootType FullName="HomeSnailHome.Converter.HousingOptionsConverter" />
+    <RootType FullName="HomeSnailHome.Converter.StringAddressConverter" />
+    <RootType FullName="HomeSnailHome.Converter.HousingQuotationConverter" />
+    <RootType FullName="HomeSnailHome.Converter.HousingPictureToImageValueConverter" />
+    <RootType FullName="HomeSnailHome.Converter.UserPictureToImageValueConverter" />
+    <RootType FullName="HomeSnailHome.Converter.SubjectValueConverter" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="MinWidth" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+      <RootProperty Name="MinHeight" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Background" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="TextAlignment" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontStyle" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Style" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Converter" />
+      <RootProperty Name="ConverterParameter" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Path" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="ElementName" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Child" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Fill" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="ImageSource" />
+      <RootProperty Name="Stretch" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+      <RootProperty Name="MinWidth" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Stretch" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo">
+      <RootMethod Name="GetIsTargetElement" />
+      <RootMethod Name="SetIsTargetElement" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
+      <RootProperty Name="Children" />
+      <RootMethod Name="GetAlignBottomWithPanel" />
+      <RootMethod Name="SetAlignBottomWithPanel" />
+      <RootMethod Name="GetAlignLeftWithPanel" />
+      <RootMethod Name="SetAlignLeftWithPanel" />
+      <RootMethod Name="GetAlignRightWithPanel" />
+      <RootMethod Name="SetAlignRightWithPanel" />
+      <RootMethod Name="GetBelow" />
+      <RootMethod Name="SetBelow" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
+      <RootProperty Name="Header" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.Views.About" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="PrimaryCommands" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.Views.ConversationListPage" />
+    <RootType FullName="HomeSnailHome.Views.DetailHousingPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Date" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
+      <RootProperty Name="Time" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="SelectedValue" />
+      <RootProperty Name="SelectedValuePath" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="IsOn" />
+      <RootProperty Name="OnContent" />
+      <RootProperty Name="OffContent" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="InputScope" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsEnabled" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="AcceptsReturn" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.Views.EditHousingPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Style" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.Views.HomePage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.Views.HousingPage" />
+    <RootType FullName="HomeSnailHome.Views.HousingResultsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressBar">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="IsIndeterminate" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.Views.HousingSearchPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Password" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.Views.MainPage" />
+    <RootType FullName="HomeSnailHome.Views.MyHousingPage" />
+    <RootType FullName="HomeSnailHome.Views.NewHousingPage" />
+    <RootType FullName="HomeSnailHome.Views.NewMessagePage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Slider">
+      <RootProperty Name="Minimum" />
+      <RootProperty Name="Maximum" />
+      <RootProperty Name="Value" />
+      <RootProperty Name="SmallChange" />
+      <RootProperty Name="TickFrequency" />
+      <RootProperty Name="TickPlacement" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.Views.NewNotationPage" />
+    <RootType FullName="HomeSnailHome.Views.NewUserPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Resources" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame">
+      <RootProperty Name="Style" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.FrameworkElement">
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.BitmapIcon">
+      <RootProperty Name="UriSource" />
+      <RootProperty Name="Style" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.IconElement">
+      <RootProperty Name="Foreground" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.SplitView">
+      <RootProperty Name="DisplayMode" />
+      <RootProperty Name="IsPaneOpen" />
+      <RootProperty Name="CompactPaneLength" />
+      <RootProperty Name="OpenPaneLength" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Pane" />
+    </RootType>
+    <RootType FullName="HomeSnailHome.Shell" />
+    <RootType FullName="HomeSnailHome.Views.UserPage" />
+  </Roots.RootTypes>
+</Roots>

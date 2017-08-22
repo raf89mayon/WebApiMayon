@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="HomeSnailHome.Views.HousingSearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HomeSnailHome.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=HousingSearchPage}"
+    Style="{StaticResource MapStyle}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <CommandBar Grid.Row="0" Background="Transparent" Height="75">
+            <AppBarButton x:Name="Cancel" Width="100" Icon="Back"
+                        Command="{Binding GoBackToHomeCommand}" Label="Annuler recherche" HorizontalAlignment="Center" />
+            <AppBarButton x:Name="Save" Width="100" Icon="Zoom"
+                        Command="{Binding GoNextCommand}" Label="Valider recherche" HorizontalAlignment="Center" />
+            <CommandBar.Content>
+                <TextBlock Text="Recherche de logements..." Margin="12,14,0,0" MinWidth="225" />
+            </CommandBar.Content>
+        </CommandBar>
+        <ProgressBar Grid.Row="1" Margin="0,10" Opacity="{Binding ProgressBarOpacity}" Foreground="#aa2d27"  Height="10" IsIndeterminate="{Binding ProgressIsIndeterminate}" />
+        <Grid Grid.Row="2">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid MaxWidth="800" Margin="10,0" HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="4*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="32" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Début de la période :</TextBlock>
+                    <DatePicker x:Name="StartDay" Date="{Binding StartDay, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="1" Grid.Column="0" Margin="0,2" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Heure :</TextBlock>
+                    <TimePicker x:Name="StartTime" Time="{Binding StartTime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="1" Grid.Column="2" Margin="5,2,0,2" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                    <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Fin de la période :</TextBlock>
+                    <DatePicker x:Name="EndDay" Date="{Binding EndDay, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="3" Grid.Column="0" Margin="0,2" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Heure :</TextBlock>
+                    <TimePicker x:Name="EndTime" Time="{Binding EndTime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.Row="3" Grid.Column="2" Margin="5,2,0,2" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                    <TextBlock Text="Type de lit : " Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" />
+                    <ComboBox x:Name="cboBedType" Grid.Row="4" Grid.Column="1" ItemsSource="{Binding Path=BedTypeCollection, Mode=TwoWay}" DisplayMemberPath="Name" SelectedItem="{Binding Path=SelectedBedType, Mode=TwoWay}" SelectedValue="{Binding Path=SelectedBedType.Code, Mode=TwoWay}" SelectedValuePath="Code" Width="150" Margin="0,2"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0">Options :</TextBlock>
+                    <TextBlock VerticalAlignment="Center" Grid.Row="5" Grid.Column="1">Wifi</TextBlock>
+                    <ToggleSwitch Grid.Row="5" Grid.Column="2" x:Name="WifiCheck" IsOn="{Binding WifiChecked, Mode=TwoWay}" OnContent="Oui" OffContent="Non" Margin="0,-6" />
+                    <TextBlock VerticalAlignment="Center" Grid.Row="6" Grid.Column="1">Bureau</TextBlock>
+                    <ToggleSwitch Grid.Row="6" Grid.Column="2" x:Name="OfficeCheck" IsOn="{Binding OfficeChecked, Mode=TwoWay}" OnContent="Oui" OffContent="Non" Margin="0,-6" />
+                    <TextBlock VerticalAlignment="Center" Grid.Row="7" Grid.Column="1">Douche</TextBlock>
+                    <ToggleSwitch Grid.Row="7" Grid.Column="2" x:Name="ShowerCheck" IsOn="{Binding ShowerChecked, Mode=TwoWay}" OnContent="Oui" OffContent="Non" Margin="0,-6" />
+                    <TextBlock VerticalAlignment="Center" Grid.Row="8" Grid.Column="1">WC</TextBlock>
+                    <ToggleSwitch Grid.Row="8" Grid.Column="2" x:Name="ToiletCheck" IsOn="{Binding ToiletChecked, Mode=TwoWay}" OnContent="Individuel" OffContent="Partagé" Margin="0,-6" />
+                    <TextBlock VerticalAlignment="Center" Grid.Row="9" Grid.Column="1">Cuisine</TextBlock>
+                    <ToggleSwitch Grid.Row="9" Grid.Column="2" x:Name="KitchenCheck" IsOn="{Binding KitchenChecked, Mode=TwoWay}" OnContent="Oui" OffContent="Non" Margin="0,-6" />
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

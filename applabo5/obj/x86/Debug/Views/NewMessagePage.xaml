@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="HomeSnailHome.Views.NewMessagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HomeSnailHome.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=NewMessagePage}"
+    Style="{StaticResource MapStyle}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="105" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <CommandBar Grid.Row="0" Background="Transparent" Height="75">
+                <!--     IsOpen="True"  -->
+                <AppBarButton x:ConnectionId='3' x:Name="Cancel" Width="100" Icon="Back"
+                Command="{Binding BackToConversationCommand}" Label="Retour" HorizontalAlignment="Center" />
+                <AppBarButton x:ConnectionId='4' x:Name="ContactHostHousing" Width="100" Icon="Send"
+                Command="{Binding SendMessageCommand}" Label="Envoyer le message" HorizontalAlignment="Center" />
+            </CommandBar>
+            <ProgressBar Margin="0,10" Opacity="{Binding ProgressBarOpacity}" Foreground="#aa2d27"  Height="10" Grid.Row="1" IsIndeterminate="{Binding ProgressIsIndeterminate}" />
+        </Grid>
+        <Grid HorizontalAlignment="Center" Width="700" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="0" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" VerticalAlignment="Center">
+                    <Border x:ConnectionId='2' Height="78" Width="78" Name="ReceiverColor" BorderBrush="#aa2d27" BorderThickness="3" CornerRadius="50" Margin="0,2,30,2">
+                        <Ellipse Height="72" Width="72">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{Binding SelectedConversation.Correspondant.Picture, Converter={StaticResource UserImage}}"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Border>
+                </StackPanel>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding SelectedConversation.Correspondant.ID}" />
+                <TextBlock Grid.Row="1" Grid.Column="1"><Run Text="{Binding SelectedConversation.Correspondant.LastName}" ></Run> <Run Text="{Binding SelectedConversation.Correspondant.FirstName}" ></Run></TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding SelectedConversation.Correspondant.PhoneNumber}" />
+                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding SelectedConversation.Correspondant.EmailAddress}" />
+            </Grid>
+            <TextBox x:ConnectionId='1' Grid.Row="1" x:Name="MessageContent" Margin="0,10" TextWrapping="Wrap" AcceptsReturn="True" InputScope="ChatWithoutEmoji" Text="{Binding MessageContent, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+            <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Derniers messages :</TextBlock>
+            <Grid Grid.Row="3" Margin="0,10">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <ListView Grid.Column="1" ItemsSource="{Binding DiscussionMessageList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ItemTemplate="{StaticResource MessageListUserTemplate}" Margin="5,5,20,5" />
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+

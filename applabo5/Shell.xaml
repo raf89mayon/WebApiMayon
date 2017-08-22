@@ -1,0 +1,101 @@
+﻿<UserControl
+    x:Class="HomeSnailHome.Shell"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HomeSnailHome"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=Shell}"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style x:Key="MapFrameStyle" TargetType="Frame">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="/Assets/hsh_background.jpg"
+                        Stretch="UniformToFill" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="ButtonIconStyle" TargetType="BitmapIcon">
+            <Setter Property="Height" Value="36" />
+            <Setter Property="Width" Value="36" />
+            <Setter Property="Margin" Value="-7" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style x:Key="MenuTextStyle" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Margin" Value="5,0,0,0" />
+        </Style>
+    </UserControl.Resources>
+    <SplitView x:Name="splitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
+               CompactPaneLength="50" OpenPaneLength="230">
+        <SplitView.Content>
+            <Frame x:Name="MainFrame" Style="{StaticResource MapFrameStyle}" ></Frame>
+        </SplitView.Content>
+        <SplitView.Pane>
+            <StackPanel Background="#aa2d27">
+                <Button x:Name="HamburgerButton" Content="&#xE700;" Style="{StaticResource ButtonStyle}" Click="HamburgerButton_Click"/>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton1" Style="{StaticResource ButtonStyle}" Command="{Binding HomeCommand}">
+                            <BitmapIcon UriSource="Images/icon/01.png" Style="{StaticResource ButtonIconStyle}" />
+                        </Button>
+                        <TextBlock Text="Accueil" Style="{StaticResource MenuTextStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton2" Style="{StaticResource ButtonStyle}" Command="{Binding HousingListCommand}">
+                            <BitmapIcon UriSource="Images/icon/02.png" Style="{StaticResource ButtonIconStyle}" />
+                        </Button>
+                        <TextBlock Text="Tous les logements" Style="{StaticResource MenuTextStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton3" Style="{StaticResource ButtonStyle}" Command="{Binding HousingAddCommand}">
+                            <BitmapIcon UriSource="Images/icon/03.png" Style="{StaticResource ButtonIconStyle}" />
+                        </Button>
+                        <TextBlock Text="Ajouter un logement" Style="{StaticResource MenuTextStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton4" Style="{StaticResource ButtonStyle}" Command="{Binding HousingSearchCommand}">
+                            <BitmapIcon UriSource="Images/icon/04.png" Style="{StaticResource ButtonIconStyle}" />
+                        </Button>
+                        <TextBlock Text="Rechercher un logement" Style="{StaticResource MenuTextStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton5" Style="{StaticResource ButtonStyle}" Command="{Binding MyHousingCommand}">
+                            <BitmapIcon UriSource="Images/icon/05.png" Style="{StaticResource ButtonIconStyle}" />
+                        </Button>
+                        <TextBlock Text="Mes logements" Style="{StaticResource MenuTextStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton6" Style="{StaticResource ButtonStyle}" Command="{Binding ConversationCommand}">
+                            <BitmapIcon UriSource="Images/icon/06.png" Style="{StaticResource ButtonIconStyle}" />
+                        </Button>
+                        <TextBlock Text="Messagerie" Style="{StaticResource MenuTextStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton7" Style="{StaticResource ButtonStyle}" Command="{Binding UsersCommand}">
+                            <BitmapIcon UriSource="Images/icon/07.png" Style="{StaticResource ButtonIconStyle}" />
+                        </Button>
+                        <TextBlock Text="Utilisateurs" Style="{StaticResource MenuTextStyle}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                        <Button x:Name="MenuButton8" Style="{StaticResource ButtonStyle}" Command="{Binding AboutCommand}">
+                            <BitmapIcon UriSource="Images/icon/08.png" Style="{StaticResource ButtonIconStyle}" />
+                        </Button>
+                        <TextBlock Text="A propos" Style="{StaticResource MenuTextStyle}" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </SplitView.Pane>
+    </SplitView>
+</UserControl>

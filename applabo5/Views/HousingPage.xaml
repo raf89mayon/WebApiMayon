@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="HomeSnailHome.Views.HousingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HomeSnailHome.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=HousingPage}"
+    Style="{StaticResource MapStyle}">
+    <Grid x:Name="CommandBarCource">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <CommandBar Grid.ColumnSpan="2" Background="Transparent" Height="75">
+            <AppBarButton x:Name="DetailHousing" Width="100" Icon="Zoom"
+                    Command="{Binding DetailHousingCommand}" Label="Afficher les détails"/>
+            <AppBarButton x:Name="DateAddOrderHousing" Width="100" Icon="Sort"
+                    Command="{Binding OrderAddDateCommand}" Label="Trier par date d'ajout"/>
+            <AppBarButton x:Name="DateAvaOrderHousing" Width="100" Icon="Sort"
+                    Command="{Binding OrderAvailableDateCommand}" Label="Trier par date de disponibilité"/>
+            <CommandBar.Content>
+                <TextBlock Text="Tous les logements..." Margin="12,14,0,0" MinWidth="225" />
+            </CommandBar.Content>
+        </CommandBar>
+        <Grid Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid Margin="10,0" HorizontalAlignment="Center">
+                    <GridView 
+                    ItemsSource="{Binding HousingsList, Mode=TwoWay}"
+                    SelectedItem="{Binding SelectedHousing, Mode=TwoWay}" 
+                    ItemTemplate="{StaticResource HousingGridTemplate}" />
+                </Grid>
+            </ScrollViewer>              
+        </Grid>
+    </Grid>
+</Page>

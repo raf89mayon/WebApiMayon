@@ -1,0 +1,154 @@
+﻿<Page
+    x:Class="HomeSnailHome.Views.DetailHousingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HomeSnailHome.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=DetailHousingPage}"
+    Style="{StaticResource MapStyle}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <CommandBar Grid.Row="0" Background="Transparent" Height="75">
+            <!--     IsOpen="True"  -->
+            <AppBarButton x:ConnectionId='4' x:Name="Cancel" Width="100" Icon="Back"
+                    Command="{Binding BackToHousingsCommand}" Label="Retour" HorizontalAlignment="Center" />
+            <AppBarButton x:ConnectionId='5' x:Name="Edit" Width="100" Icon="Edit"
+                    Command="{Binding EditHousingCommand}" Label="Modifier ce logement" HorizontalAlignment="Center" />
+            <AppBarButton x:ConnectionId='6' x:Name="ContactHostHousing" Width="100" Icon="Mail"
+                    Command="{Binding ContactHousingCommand}" Label="Contacter le propriétaire" HorizontalAlignment="Center" />
+            <AppBarButton x:ConnectionId='7' x:Name="AddNotationHousing" Width="100" Icon="Page"
+                    Command="{Binding CommentHousingCommand}" Label="Noter ce logement"  HorizontalAlignment="Center" />
+            <AppBarButton x:ConnectionId='8' x:Name="DeleteHousing" Width="100" Icon="Delete"
+                    Command="{Binding DeleteHousingCommand}" Label="Supprimer ce logement"  HorizontalAlignment="Center" />
+        </CommandBar>
+        <Grid Grid.Row="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Grid MaxWidth="800" Margin="10,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Margin="0,10" Grid.Column="0" Grid.ColumnSpan="15">
+                            <Border Width="260" BorderBrush="#aa2d27" BorderThickness="5" VerticalAlignment="Top">
+                                <Image Height="Auto" Width="250" Source="{Binding SelectedHousing.Pictures, Converter={StaticResource HousingImage}}"/>
+                            </Border>
+                        </StackPanel>
+                        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                                <RowDefinition MinHeight="25" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="6*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0">Référence :</TextBlock>
+                            <TextBlock x:ConnectionId='2' Grid.Row="0" Grid.Column="1" Name="HousingID"><Run Text="{Binding SelectedHousing.ID}" ></Run></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0">Disponibilité :</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="25,0,0,0"><Run Text="Du " ></Run>
+            <Run Text="{Binding SelectedHousing.StartDate, Converter={StaticResource StringConverter}, ConverterParameter='{}{0:dd MMMM yyyy à HH:mm}'}" ></Run>
+            <Run Text=" au " ></Run>
+            <Run Text="{Binding SelectedHousing.EndDate, Converter={StaticResource StringConverter}, ConverterParameter='{}{0:dd MMMM yyyy à HH:mm}'}" ></Run>
+                            </TextBlock>
+                            <TextBlock Grid.Row="3" Grid.Column="0">Adresse :</TextBlock>
+                            <TextBlock Grid.Row="3" Grid.Column="1"><Run Text="{Binding SelectedHousing, Converter={StaticResource AddressConverter}}" ></Run></TextBlock>
+                            <TextBlock Grid.Row="4" Grid.Column="0">Annonce ajoutée le :</TextBlock>
+                            <TextBlock Grid.Row="4" Grid.Column="1"><Run Text="{Binding SelectedHousing.AddDate, Converter={StaticResource StringConverter}, ConverterParameter='{}{0:dd/MM/yyyy - HH:mm}'}" ></Run></TextBlock>
+                            <TextBlock Grid.Row="5" Grid.Column="0">Annonce modifiée le :</TextBlock>
+                            <TextBlock Grid.Row="5" Grid.Column="1"><Run Text="{Binding SelectedHousing.EditDate, Converter={StaticResource StringConverter}, ConverterParameter='{}{0:dd/MM/yyyy - HH:mm}'}" ></Run></TextBlock>
+                            <TextBlock Grid.Row="6" Grid.Column="0">Type de lit :</TextBlock>
+                            <TextBlock Grid.Row="6" Grid.Column="1"><Run Text="{Binding SelectedHousing.BedType, Converter={StaticResource BedTypeConverter}}" ></Run></TextBlock>
+                            <TextBlock Grid.Row="7" Grid.Column="0">Options :</TextBlock>
+                            <Grid Grid.Row="7" Grid.Column="1">
+                                <Image Height="20" Width="20"
+                    Source="{Binding SelectedHousing.Kitchen, Converter={StaticResource HousingOptionsConverter}}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center" />
+                                <TextBlock Margin="20,0,0,0">Cuisine</TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="8" Grid.Column="1">
+                                <Image Height="20" Width="20"
+                    Source="{Binding SelectedHousing.Toilet, Converter={StaticResource HousingOptionsConverter}}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center" />
+                                <TextBlock Margin="20,0,0,0">Toilette individuelle</TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="9" Grid.Column="1">
+                                <Image Height="20" Width="20"
+                    Source="{Binding SelectedHousing.Shower, Converter={StaticResource HousingOptionsConverter}}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center" />
+                                <TextBlock Margin="20,0,0,0">Douche</TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="10" Grid.Column="1">
+                                <Image Height="20" Width="20"
+                    Source="{Binding SelectedHousing.Office, Converter={StaticResource HousingOptionsConverter}}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center" />
+                                <TextBlock Margin="20,0,0,0">Bureau</TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="11" Grid.Column="1">
+                                <Image Height="20" Width="20"
+                    Source="{Binding SelectedHousing.Wifi, Converter={StaticResource HousingOptionsConverter}}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center" />
+                                <TextBlock Margin="20,0,0,0">Wifi</TextBlock>
+                            </Grid>
+                            <TextBlock Grid.Row="12" Grid.Column="0">Description :</TextBlock>
+                            <TextBlock Grid.Row="12" Grid.Column="1" TextWrapping="Wrap"><Run Text="{Binding SelectedHousing.Description}" ></Run></TextBlock>
+                            <TextBlock Grid.Row="13" Grid.Column="0" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="0,20,0,10" FontSize="18">Informations Propriétaire :</TextBlock>
+                            <StackPanel Grid.Row="14" Grid.Column="0" Grid.RowSpan="4" VerticalAlignment="Center">
+                                <Border x:ConnectionId='3' Height="92" Width="92" Name="ReceiverColor" BorderBrush="#aa2d27" BorderThickness="3" CornerRadius="50">
+                                    <Ellipse Height="86" Width="86">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="{Binding SelectedHousing.Host.Picture, Converter={StaticResource UserImage}}"/>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                </Border>
+                            </StackPanel>
+                            <TextBlock Grid.Row="14" Grid.Column="1"><Run Text="{Binding SelectedHousing.Host.ID}" ></Run></TextBlock>
+                            <TextBlock Grid.Row="15" Grid.Column="1"><Run Text="{Binding SelectedHousing.Host.LastName}" ></Run> <Run Text="{Binding SelectedHousing.Host.FirstName}" ></Run></TextBlock>
+                            <TextBlock Grid.Row="16" Grid.Column="1"><Run Text="{Binding SelectedHousing.Host.PhoneNumber}" ></Run></TextBlock>
+                            <TextBlock Grid.Row="17" Grid.Column="1"><Run Text="{Binding SelectedHousing.Host.EmailAddress}" ></Run></TextBlock>
+                        </Grid>
+                        <Grid x:ConnectionId='1' Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="GridWindows"></Grid>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,20,0,10" FontSize="18" Text="{Binding NotationsTitle, Mode=TwoWay}" />
+                        <ListView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+            ItemsSource="{Binding NotationsHousing, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" 
+            ItemTemplate="{StaticResource NotationListTemplate}" />
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </Grid>        
+    </Grid>
+</Page>
+

@@ -1,0 +1,17 @@
+App.xbf
+Shell.xbf
+Views\About.xbf
+Views\ConversationListPage.xbf
+Views\DetailHousingPage.xbf
+Views\EditHousingPage.xbf
+Views\HomePage.xbf
+Views\HousingPage.xbf
+Views\HousingResultsPage.xbf
+Views\HousingSearchPage.xbf
+Views\MainPage.xbf
+Views\MyHousingPage.xbf
+Views\NewHousingPage.xbf
+Views\NewMessagePage.xbf
+Views\NewNotationPage.xbf
+Views\NewUserPage.xbf
+Views\UserPage.xbf

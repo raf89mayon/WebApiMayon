@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="HomeSnailHome.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HomeSnailHome.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=HomePage}"
+    Style="{StaticResource MapStyle}">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel HorizontalAlignment="Center">
+            <Grid Margin="0,35,0,15" MaxWidth="800" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" VerticalAlignment="Center">
+                    <Border Height="78" Width="78" Name="ReceiverColor" BorderBrush="#aa2d27" BorderThickness="3" CornerRadius="50" Margin="0,2,30,2">
+                        <Ellipse Height="72" Width="72">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="{Binding ConnectedUser.Picture, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource UserImage}, Mode=TwoWay}"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Border>
+                </StackPanel>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding ConnectedUser.ID, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <TextBlock Grid.Row="1" Grid.Column="1"><Run Text="{Binding ConnectedUser.LastName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></Run> <Run Text="{Binding ConnectedUser.FirstName, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></Run></TextBlock>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding ConnectedUser.PhoneNumber, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding ConnectedUser.EmailAddress, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+            </Grid>
+            <Image Height="Auto" Width="250" Margin="0,15,0,15" Stretch="UniformToFill" Source="/Images/logo_hsh.png" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Button Name="SignOutButton" Content="Se déconnecter" Command="{Binding SignOutCommand}" Width="125" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
