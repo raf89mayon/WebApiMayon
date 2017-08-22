@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SmartConnection-Web.config Connection String" description="SmartConnection Chaîne de connexion utilisée dans web.config par l’application pour accéder à la base de données." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\C\\Desktop\\HomeSnailHome-master\\SmartCityWebApp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SmartConnection']/@connectionString" />
+  </parameter>
+</parameters>
